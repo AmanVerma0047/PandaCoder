@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}CodePanda{% endblock title %}
+
+{% block body %}
+
+<h2>Hello {{request.user}}!</h2>
+<a href="/logout">logout</a>
+
+<div class ="container-fluid" style="background-color:#247074; display:flex; flex-direction:row; align-items:center; justify-content:center;">
+  <div class = "showcasetext">
+    <h1 class="display-4 text-white">A Better Way to Practice Programming!</h1>
+    <p class="lead text-white">Learn to code with our 100+ practice code problems and a understandable documentation.</p>
+    <hr class="my-4 text-white">
+    <p class = "text-white">Use CodePanda Editor with real time programming execution.</p>
+    <p class="lead text-white">
+    <a class="btn text-white btn-primary btn-lg " href="#" role="button">Learn more</a>
+    </p>
+  </div>
+  <div class = "showcaseimg">
+  <img src = "static/images/Real Time Code Editor.gif" alt="codeeditor" width="540px" height="540px">
+  </div>
+</div>
+<img src = "static\images\borderimage.png" width="100%">
+</div>
+
+{% endblock body %}
