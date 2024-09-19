@@ -53,5 +53,5 @@ def logoutUser(request):
     # return render(request,'index.html')
     return redirect("/login")
 
-def profile(request):
+def profile(request): 
     return render(request,"profile.html")
