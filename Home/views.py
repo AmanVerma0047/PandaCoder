@@ -37,7 +37,7 @@ def loginUser(request):
         if user is not None:
         # A backend authenticated the credentials
             login(request,user)
-            return redirect("/")
+            return redirect("/profile")
         else:
         # No backend authenticated the credentials
             context = {
