@@ -37,7 +37,11 @@ def loginUser(request):
         if user is not None:
         # A backend authenticated the credentials
             login(request,user)
-            return redirect("/profile")
+            context = {
+                'login_username':username
+            }
+            return render(request,"profile.html",context)
+            # return redirect("/profile")
         else:
         # No backend authenticated the credentials
             context = {
@@ -53,5 +57,5 @@ def logoutUser(request):
     # return render(request,'index.html')
     return redirect("/login")
 
-def profile(request):
+def profile(request): 
     return render(request,"profile.html")
