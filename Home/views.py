@@ -14,7 +14,8 @@ def about(request):
     # return HttpResponse("this is about us")
 
 def projects(request):
-    return HttpResponse("This is projects file")
+    return render(request,'projects.html')
+    # return HttpResponse("this is project page")
 
 def contactus(request):
     if request.method =="POST":
