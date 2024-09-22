@@ -14,7 +14,8 @@ def about(request):
     # return HttpResponse("this is about us")
 
 def projects(request):
-    return HttpResponse("This is projects file")
+    return render(request,'projects.html')
+    # return HttpResponse("this is project page")
 
 def contactus(request):
     if request.method =="POST":
@@ -37,11 +38,11 @@ def loginUser(request):
         if user is not None:
         # A backend authenticated the credentials
             login(request,user)
-            context = {
-                'login_username':username
-            }
-            return render(request,"profile.html",context)
-            # return redirect("/profile")
+            # context = {
+            #     'login_username':username
+            # }
+            # return render(request,"profile.html",context)
+            return redirect("/profile")
         else:
         # No backend authenticated the credentials
             context = {
