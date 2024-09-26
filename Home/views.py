@@ -53,6 +53,9 @@ def loginUser(request):
         
     return render(request,'login.html')
 
+def signup(request):
+    # return render(request,'signup.html')
+    return HttpResponse("this is signup page")
 
 def logoutUser(request):
     # return render(request,'index.html')
