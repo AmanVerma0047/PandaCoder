@@ -12,4 +12,5 @@ urlpatterns = [
     path("profile",views.profile,name="profile"),
     path("signup",views.signup,name="signup"),
     path("javascript",views.javascript,name="javascript"),
+    path('codeEditor',views.codeEditor,name="codeEditor"),
 ]

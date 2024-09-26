@@ -62,8 +62,10 @@ def logoutUser(request):
     return redirect("/login")
 
 def javascript(request):
-    # return render(request,'javascript.html')
     return render(request,'javascript.html')    
+
+def codeEditor(request):
+    return render(request,'codeEditor.html')  
 
 def profile(request): 
     return render(request,"profile.html")
