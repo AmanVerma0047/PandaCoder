@@ -1,1 +1,55 @@
-<h2>This is signup page</h2>
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock title %}
+
+{% block body%}
+
+<!-- Registration 7 - Bootstrap Brain Component -->
+<div class="container my-5">
+
+  <h2>Sign Up</h2><br>
+  
+<form class="form-signin" method="post" action="/signup">
+  {% csrf_token %}
+  <div class="row gy-3 overflow-hidden">
+    <div class="col-12">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
+        <label for="firstName" class="form-label">First Name</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="lastName" id="lastName" placeholder="First Name" required>
+        <label for="lastName" class="form-label">Last Name</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+        <label for="email" class="form-label">Email</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" name="password" id="password" value="" placeholder="Password" required>
+        <label for="password" class="form-label">Password</label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" name="iAgree" id="iAgree" required>
+        <label class="form-check-label text-secondary" for="iAgree">
+          I agree to the <a href="#!" class="link-primary text-decoration-none">terms and conditions</a>
+        </label>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="d-grid">
+        <button class="btn bsb-btn-xl btn-primary" type="submit">Sign up</button>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+
+{% endblock body%}
