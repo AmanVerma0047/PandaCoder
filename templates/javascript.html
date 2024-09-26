@@ -1,0 +1,480 @@
+{% extends "base.html" %}
+{% block title %}Javascript Documentation{% endblock title %}
+
+{% block body %}
+
+
+<!-- Java Script Tutorial -->
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Tutorial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <style>     
+        *{
+         margin: 0px;
+         padding: 0px;
+         font-family: Arial, Helvetica, sans-serif;
+        }
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+        body {
+            color: #666666;
+            font-weight: 425;
+            word-spacing: 0.025em;
+            letter-spacing: 0.015em;
+            font-size: 1.13rem;
+            height: 100%;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        #main {
+            position: relative;
+            max-width: 800px;
+            margin: 15px 300px 19px 360px;
+            height: 100%;
+            line-height: 1.5;
+        }
+
+        .info {
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .divider {
+            margin: 1rem 0rem;
+        }
+
+        .divider {
+            border-top: 1px solid rgba(34, 36, 38, 0.15);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #run {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 19px;
+        }
+
+        .image-monster {
+            float: right;
+            margin-right: 0em;
+            margin-bottom: 1em;
+            margin-left: 1em;
+            width: 300px;
+            height: auto;
+            position: relative;
+        }
+
+        p {
+            margin-bottom: 18px;
+            font-size: 18px;
+
+        }
+
+        .table {
+            position: relative;
+            border: 1px solid rgba(34, 36, 38, 0.15);
+            border-top: 4px solid #21ba45;
+            border-bottom: 4px solid #21ba45;
+            box-shadow: #666666;
+            padding: 1rem 1rem;
+            border-radius: 0.5rem;
+        }
+        .list{
+            cursor: pointer;
+        }
+        .table a{
+            color: #4183c4;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+            padding: 0.14285714em 0em;
+            line-height: inherit;
+        }
+        h2{
+            font-weight: 600; 
+            font-size: 23px; 
+            color: #666666;
+            cursor: default;
+        }
+        code {
+            background-color: #E8E8E8;
+            border: 1px solid #BCBEC0;
+            padding: 2px;
+            font-family: "monospace", 'Menlo', 'Consolas';
+            font-size: 1rem;
+            }
+        b{
+            color: #666666;
+            font-size: 18px;
+        }               
+        .example {
+            padding: 8px 20px;
+            margin-top: 15px;
+            margin-bottom: 19px;
+            box-shadow: none;
+            background-color: #E7E9EB;
+            border-radius: 5px;
+        }
+        .example_content{
+            background-color: #ffffff;
+            margin-top: 12px;
+            margin-bottom: 12px;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-bottom: 12px;
+            border: none;
+            border-left: 5px solid #21ba45;
+        }
+        ul li{
+            margin-left: 46px;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div id="main" class="info">
+        <div class="info">
+            <h1 style="color: #161c20; font-size: 34px;">Java Script Tutorial For Beginners</h1>
+            <h2 style="margin: 6px 0px 10px; font-weight: 600;font-size: 24px; color: #666666;"> &nbsp;&nbsp; Learn with
+                us java script</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="info" id="run">
+            <a href="" style="text-decoration: none;">Tutorials</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="" style="text-decoration: none;">Java Script</a>
+        </div>
+        <div class="divider"></div>
+        <img src="static/images/study.png" alt="cute_panda" class="image-monster info">
+        <p>In this tutorial, the learning speed is your choice.
+            Everything is up to you. &nbsp;
+            If you are struggling, take a break, or re-read the material.
+            Always make sure you understand all the "Try-it-Yourself" examples.</p>
+        <p>
+            JavaScript isn't just another programming language; it's the language of the web. &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  From enhancing user interfaces with smooth animations to handling complex logic behind the
+            scenes,
+            JavaScript empowers developers to transform static websites into interactive experiences.
+        </p>
+        <div class="table" style="margin-top: 40px; margin-bottom: 40px;">
+            <h1 style="color: #666666; font-weight: 500;">Table Of Contents</h1>
+
+          <div id="list">
+            <p style="margin: 10px 0px 5px 0px;">1. &nbsp;<a href="#strings">Strings</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">2. &nbsp;<a href="#variables">Variables</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">3. &nbsp;<a href="#numbers">Numbers</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">4. &nbsp;<a href="#operator">Operators</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">5. &nbsp;<a href="#function">Functions</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">6. &nbsp;<a href="#array">Array</a><br></p>
+
+            <p style="margin: 10px 0px 5px 0px;">&nbsp;&nbsp; 6.1 &nbsp;<a href="#indexes">Indexes</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">&nbsp;&nbsp; 6.2 &nbsp;<a href="#mutability">Mutability</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">&nbsp;&nbsp; 6.3 &nbsp;<a href="#length">length</a><br></p>
+
+            <p style="margin: 10px 0px 5px 0px;">7. &nbsp;<a href="#object">Objects</a><br></p>
+
+            <p style="margin: 10px 0px 5px 0px;">&nbsp;&nbsp; 7.1 &nbsp;<a href="#key">Key-value Pairs</a><br></p>
+            <p style="margin: 10px 0px 5px 0px;">&nbsp;&nbsp; 7.2 &nbsp;<a href="#dot">Dot Notation</a><br></p>
+
+            <p style="margin: 10px 0px 5px 0px;">8. &nbsp;<a href="#loops">Loops</a><br></p>
+          </div>
+        </div>
+
+        <h2 id="strings"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>S</big>trings</h2>
+        <div class="divider"></div>
+        <p>In JavaScript, strings are sequences of characters enclosed within either single quotes <code>'</code> or double quotes <code>"</code>. 
+            Strings must begin and end with <b>quotation marks</b> .</p>
+
+    <div class="example">
+        <h3>Example</h3>
+        <div class="example_content" style="color: #161c20; ">
+            <span> &nbsp; let &nbsp; <b>'</b> Hi Panda <b>'</b></span> <br>
+            <span> &nbsp; let &nbsp; <b>"</b> Hi Panda <b>"</b></span>
+        </div>
+    </div>   
+    <p style="margin-top: 18px;"> The quotes are there to indicate the enclosed text is a value, not code.</p>
+    <h2 id="variables"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>V</big>ariables</h2>
+     <div class="divider"></div> 
+    <p>A variable is a container for a value, like a number we might use in a sum,
+       or a string that we might use as part of a sentence.
+    </p>
+    <p><b>Basic rules to declare a variable in JavaScript:</b></p>
+    <ul>
+        <li>These are case-sensitive.</li>
+        <li>Can only begin with a letter, underscore <code>_</code>  or   <code>$</code> symbol.</li>
+        <li>It can contain letters, numbers, underscore, or <code>$</code> symbol.</li>
+        <li>A variable name cannot be a reserved keyword.</li>
+    </ul><br>
+    <p>JavaScript is a dynamically typed language so the type of variables is decided at runtime.
+        Therefore there is no need to explicitly define the type of a variable. 
+        <b> We can declare variables in JavaScript in three ways:</b>
+    </p> 
+    <ul>
+        <li>Using let keyword</li>
+        <li>using var keyword</li>
+        <li>using const keyword</li>
+    </ul><br>
+    <div class="example">
+        <h3>Example</h3>
+        <div class="example_content" style="color: #161c20; ">
+            <span> &nbsp; let &nbsp; $ = "My Panda" </span> <br>
+            <span> &nbsp; var &nbsp; a = "Hi Panda" </span><br>
+            <span> &nbsp; const &nbsp; _panda = "bamboo"</span>
+        </div>
+    </div>     
+   <h2 id="variables"><a href="" style="text-decoration: none; color: #4183c4; ">#</a> &nbsp;<big>N</big>umbers</h2>
+    <div class="divider"></div>    
+    <p>The <code>Number</code> constructor contains constants and methods for working with numbers.
+         Values of other types can be converted to numbers using the <code>Number()</code> function.</p>
+    <p>If a number does not contain a decimal, it's referred to as an <b>integer</b>.
+        JavaScript has only one type of number. Numbers can be written with or without decimals.
+    </p>
+    <div class="example">
+        <h3>Example</h3>
+        <div class="example_content" style="color: #161c20; ">
+            <span> &nbsp; let &nbsp; A = 2.41 &nbsp;&nbsp; // A number with decimals</span> <br>
+            <span> &nbsp; let &nbsp; P = 8 &nbsp;&nbsp; // A number without decimals</span><br>
+        </div>
+    </div>     
+    <h2 id="operator"><a href="" style="text-decoration: none; color: #4183c4; ">#</a> &nbsp;<big>O</big>perators</h2>
+    <div class="divider"></div>     
+    <p><b>JavaScript Operators</b> are symbols used to perform specific mathematical, comparison, assignment, and logical computations on operands. <br>
+    They are fundamental elements in JavaScript programming, allowing developers to manipulate data and control program flow efficiently.</p>
+    <p>Operators are the symbols between values that allow different operations like 
+        addition <code>+</code> , subtraction <code>-</code> , multiplication <code>*</code> , division <code>/</code> , modulus <code>%</code> , and exponentiation <code>**</code> .</p>
+        <div class="example">
+            <h3>Example : </h3>
+             <h2 style="margin-top: 9px;"> 1. Addition operator(+)</h2>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp; let &nbsp; x = 2; </span> <br>
+                <span> &nbsp; let &nbsp; y = 3; </span><br>
+                <span> &nbsp; let &nbsp; z = x + y; </span><br>
+            </div>
+            <h2 style="margin-top: 9px;"> 2. Substractor operator(-)</h2>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp; let &nbsp; a = 7 </span> <br>
+                <span> &nbsp; let &nbsp; b = 4; </span><br>
+                <span> &nbsp; let &nbsp; z = x - y; </span><br>
+            </div>            
+            <h2 style="margin-top: 9px;"> 3. Multiplication operator(*)</h2>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp; let &nbsp; p = 4; </span> <br>
+                <span> &nbsp; let &nbsp; q = 3; </span><br>
+                <span> &nbsp; let &nbsp; z = x * y; </span><br>
+            </div>             
+            <h2 style="margin-top: 9px;"> 4. Division operator(/)</h2>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp; let &nbsp; x = 8; </span> <br>
+                <span> &nbsp; let &nbsp; y = 4; </span><br>
+                <span> &nbsp; let &nbsp; z = x / y; </span><br>
+            </div> 
+            <h2 style="margin-top: 9px;"> 5. Modulus operator(%)</h2>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp; let &nbsp; m = 4; </span> <br>
+                <span> &nbsp; let &nbsp; n = 2; </span><br>
+                <span> &nbsp; let &nbsp; z = x % y; </span><br>
+            </div>             
+            <h2 style="margin-top: 9px;"> 5. Exponentiation operator(**)</h2>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp; let &nbsp; x = 3; </span> <br>
+                <span> &nbsp; let &nbsp; y = 2; </span><br>
+                <span> &nbsp; let &nbsp; z = x ** y; </span><br>
+            </div>             
+        </div>      
+        <h2 id="function"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>F</big>unctions</h2>
+        <div class="divider"></div> 
+        <p>A JavaScript function is defined with the <code style="color: red;">function</code> keyword, followed by a name, followed by parentheses ().</p>
+         <p>A function definition (also called a <b>function declaration</b>, or <b>function statement</b>)
+            consists of the <code style="color: red;">function</code> keyword, followed by:</p> 
+            <ul>
+                <li>The name of the function.</li>
+                <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                <li>The JavaScript statements that define the function, enclosed in curly braces, <code>{ /* … */ }</code>.</li>
+            </ul>
+            <div class="example">
+                <h3>Example</h3>
+                <div class="example_content" style="color: #161c20; ">
+                    <span> &nbsp;&nbsp;&nbsp; <b style="color: red;">function</b> <b style="color: #4183c4;">square</b>(number) { </span> <br>
+                    <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return number * number; <br>&nbsp;&nbsp; } </span><br>
+                </div>
+            </div>               
+            <p ><b style="color: red;">Using the return <code style="color: #161c20;">keyword</code> is very important.
+                When you encounter a function, you must <code style="color: #161c20;">return</code> your answer, otherwise the code won't work.</b></p>
+        <h2 id="array"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>A</big>rrays</h2>
+        <div class="divider"></div>
+        <p>An array in JavaScript is a data structure used to store multiple values in a single variable. It can hold various data types and allows for dynamic resizing. </p>
+        <p><b>We can write array like:</b></p>
+        <div class="example">
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; <b style="color: #4183c4;">const</b> cars = ["Panda", "Bamboo", "Eat"];</span> <br>
+            </div>
+        </div>   
+        <h3 id="indexes" style="font-weight: 600;"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>I</big>ndexes</h3>     
+        <p>    Elements are accessed by their index, starting from 0.</p>
+        <p>We can access index of elements of array in JavaScript using:</p>
+        <div class="example">
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; <pre style="display: inline; color: #4183c4;">const</pre> fruits = ["Papaya", "Banana", "Apple", "Mango"];</span><br>
+                <span> &nbsp;&nbsp;&nbsp; <pre style="display: inline; color: #4183c4;">let</pre> index = fruits.indexOf("Apple");</span>
+
+            </div>
+            <h5>Index of "Apple" is: 2</h5>
+        </div>
+        <h3 id="mutability" style="font-weight: 600;"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>M</big>utability</h3>     
+          <p>Elements in arrays are <b>mutable</b>, which means they can be <b>changed</b>. 
+            For example, let's say we've got an array of numbers:</p>
+            <div class="example">
+                <div class="example_content" style="color: #161c20; ">
+                    <span> &nbsp;&nbsp;&nbsp; <b style="color: #4183c4;">const</b> cars = ["Panda", "Bamboo", "Eat"];</span> <br>
+                </div>
+                <h5>To change the value of <b>"Eat"</b> (at index 2), we do this:</h5>
+                <div class="example_content" style="color: #161c20; ">
+                    <span> &nbsp;&nbsp;&nbsp; cars[3] = "Animal"</span> <br>
+                </div>               
+            </div>             
+        <h3 id="length" style="font-weight: 600;"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>.l</big>ength</h3>     
+        
+        <p>Javascript has a .length property that returns the size of an array as a number(integer).</p>    
+        <p>Here's an example of how to use it:</p>
+        <div class="example">
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; let number = [5,1,7,4]</span> <br>
+            </div>
+            <h5>To find length of array :</h5>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; number.length</span> <br>
+            </div>            
+            <p>The length of number array is : 4</p>
+        </div> 
+        <h2 id="object"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>O</big>bjects</h2>
+       
+        <div class="divider"></div> 
+        <p>Objects in JavaScript are the most important data type and form the building blocks for modern JavaScript. <br>
+        Unlike primitive data types (Number, String, Boolean, null, undefined, and symbol), which hold a single value, objects can hold multiple values as properties.</p>
+        
+        <h5>We can create objects in JavaScript like:</h5>
+        <div class="example">
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; const games = {</span> <br>
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indoor games: "Chess",</span> <br>    
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Outdoor games: "Cricket",</span> <br> 
+                <span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; E-games: "Free Fire"</span> <br> 
+                <span> &nbsp;&nbsp;&nbsp; }</span> <br> 
+            </div>
+        </div>        
+        <h3 id="key" style="font-weight: 600;"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>K</big>ey-Value Pairs</h3>     
+        <p>An object contains properties, or key-value pairs. 
+            Each property has a name, which is also called a key, and a corresponding value.</p>          
+        <p>Objects are variables too. But objects can contain many values.</p>
+        <p>An object literal is a list of name:value pairs inside curly braces {}</p>
+        <div class="example">
+            <h4>Example:</h4>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; const car = {type:"Fiat", model:"500", color:"white"};</span> <br>
+            </div>
+        </div>
+        <h2 id="dot"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>D</big>ot Notation</h2>
+        <p>In the <code>object.propertyName</code> syntax, 
+         the propertyName must be a valid JavaScript identifier which can also be a <code>reserved word</code>.</p>
+         <p> You want to access the E-games of game, you would return E-game.game. This is called dot notation</p> 
+        <div class="example">
+         <h4>Example:</h4>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; const car = {type:"Fiat", model:"500", color:"white"};</span> <br>
+            </div>
+        </div>
+        <h2 id="loops"><a href="" style="text-decoration: none; color: #4183c4;">#</a> &nbsp;<big>A</big>rrays</h2>
+        <div class="divider"></div>
+        <p>The JavaScript loops are used to iterate the piece of code using for, while, do while or for-in loops. 
+         It makes the code compact. It is mostly used in array.</p>
+        <p>There are four types of loops in JavaScript.</p>
+        <ul>
+            <li>for loop</li>
+            <li>while loop</li>
+            <li>do-while loop</li>
+        </ul>
+        <br>
+        <h3>For loop in Java Script </h3>
+        <p>A for loop in JavaScript repeatedly executes a block of code as long as a specified condition is true.
+            It includes initialization, condition checking, and iteration steps, making it efficient for controlled, repetitive tasks.</p>
+        <div class="example">
+            <h4>Syntax:</h4>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; for (initialization; condition; updation){</span> <br>
+                <span> &nbsp;&nbsp;&nbsp; Code to be executed</span> <br>  
+                <span> &nbsp;&nbsp;&nbsp; }</span> <br>  
+            </div>
+        </div>
+        <div class="example">
+            <h4>Example:</h4>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; for (let i = 0; i < 5; i++) {</span> <br>
+                <span> &nbsp;&nbsp;&nbsp; document.write(i + "< br>") </span> <br>  
+                <span> &nbsp;&nbsp;&nbsp; }</span> <br>  
+            </div>
+        </div><br>
+        <h3>while loop in Java Script </h3>
+        <div class="example">
+            <h4>Syntax:</h4>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; while (condition){</span> <br>
+                <span> &nbsp;&nbsp;&nbsp; Code to be executed</span> <br>  
+                <span> &nbsp;&nbsp;&nbsp; }</span> <br>  
+            </div>
+        </div>
+        <div class="example">
+            <h5>Example:</h5>
+        <div class="example_content" style="color: #161c20; ">
+            <span> &nbsp;&nbsp;&nbsp; while(i<=5) {</span> <br>
+            <span> &nbsp;&nbsp;&nbsp; document.write(i + "< br>") </span> <br>  
+            <span> &nbsp;&nbsp;&nbsp; i++;</span> <br>
+            <span> &nbsp;&nbsp;&nbsp; }</span> <br>  
+          </div>
+        </div><br>
+
+        <h3>do-while loop in Java Script </h3>
+        <div class="example">
+            <h4>Syntax:</h4>
+            <div class="example_content" style="color: #161c20; ">
+                <span> &nbsp;&nbsp;&nbsp; do{</span> <br>
+                <span> &nbsp;&nbsp;&nbsp; Code to be executed</span> <br>  
+                <span> &nbsp;&nbsp;&nbsp; }while(condition);</span> <br>  
+            </div>
+        </div>
+        <div class="example">
+            <h5>Example:</h5>
+        <div class="example_content" style="color: #161c20; ">
+            <span> &nbsp;&nbsp;&nbsp; do {</span> <br>
+            <span> &nbsp;&nbsp;&nbsp; document.write(i + "< br>") </span> <br>  
+            <span> &nbsp;&nbsp;&nbsp; i++;</span> <br>
+            <span> &nbsp;&nbsp;&nbsp; }while(i<=5);</span> <br>  
+          </div>
+        </div><br>
+        <div class="divider"></div>
+           
+
+    </div>
+</body>
+
+</html>
+
+{% endblock body %}

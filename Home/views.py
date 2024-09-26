@@ -61,5 +61,9 @@ def logoutUser(request):
     # return render(request,'index.html')
     return redirect("/login")
 
+def javascript(request):
+    # return render(request,'javascript.html')
+    return render(request,'javascript.html')    
+
 def profile(request): 
     return render(request,"profile.html")
