@@ -10,6 +10,8 @@ def index(request):
     return render(request,'index.html')
     #return HttpResponse("this is homepage")
 
+def about(request):
+    return render(request,'about.html')
 
 def projects(request):
     return render(request,'projects.html')
