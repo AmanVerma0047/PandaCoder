@@ -54,7 +54,20 @@ def loginUser(request):
     return render(request,'login.html')
 
 def signup(request):
-    return render(request,'signup.html')
+    if request.method =="POST":
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password = request.POST.get('username')
+        # creating a object to save the user 
+        user = User(username,password,email)
+        user.save()
+        messages.success(request, " Thanks you for Registration!")
+
+    context = {
+        'alerttype':'success'
+    }
+
+    return render(request,'signup.html',context)
     # return HttpResponse("this is signup page")
 
 def logoutUser(request):
