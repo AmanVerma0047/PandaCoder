@@ -9,9 +9,7 @@ from django.contrib.auth import logout,authenticate,login
 def index(request):
     return render(request,'index.html')
     #return HttpResponse("this is homepage")
-def about(request):
-    return render(request,'about.html')
-    # return HttpResponse("this is about us")
+
 
 def projects(request):
     return render(request,'projects.html')
