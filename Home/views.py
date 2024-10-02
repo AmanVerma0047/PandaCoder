@@ -57,7 +57,7 @@ def signup(request):
     if request.method =="POST":
         username = request.POST.get('username')
         email = request.POST.get('email')
-        password = request.POST.get('username')
+        password = request.POST.get('password')
         # creating a object to save the user 
         user = User(username,password,email)
         user.save()
