@@ -2,7 +2,7 @@ from django.shortcuts import render,HttpResponse,redirect
 from django.contrib import messages
 from datetime import datetime
 from Home.models import Contact
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, auth
 from django.contrib.auth import logout,authenticate,login
 
 # Create your views here.
@@ -57,10 +57,10 @@ def signup(request):
     if request.method =="POST":
         username = request.POST.get('username')
         email = request.POST.get('email')
-        password = request.POST.get('username')
+        password = request.POST.get('password')
         # creating a object to save the user 
-        user = User(username,password,email)
-        user.save()
+        data = User.objects.create_user(username=username,email=email,password=password)
+        data.save()
         messages.success(request, " Thanks you for Registration!")
 
     context = {
