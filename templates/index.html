@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block title %}CodePanda{% endblock title %}
-
+{% load static %}
 {% block body %}
 
 <h2>Hello {{request.user}}!</h2>
@@ -17,10 +17,10 @@
     </p>
   </div>
   <div class = "showcaseimg">
-  <img src = "static/Real Time Code Editor.gif" alt="codeeditor" width="540px" height="540px">
+  <img src = "{% static 'Real Time Code Editor.gif' %}" alt="codeeditor" width="540px" height="540px">
   </div>
 </div>
-<img src = "static\borderimage.png" width="100%">
+<img src = "{% static 'borderimage.png' %}" width="100%">
 </div>
 
 {% endblock body %}

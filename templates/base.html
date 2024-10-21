@@ -1,4 +1,4 @@
-<!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
     <!--Nav Bar-->
     <nav class="navbar navbar-expand-lg bg-black bg-body-tertiary " data-bs-theme = "dark">
         <div class="container-fluid">
-            <img src="static/logo.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+            <img src="{% static 'logo.jpg' %}" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
           <a class="navbar-brand" href="/"> &nbsp;CodePanda</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
