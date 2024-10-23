@@ -1,0 +1,319 @@
+{% extends "base.html" %}
+{% block title %}Calculator Page{% endblock title %}
+
+{% block body %}
+
+<head>
+	
+	<script>
+		function refresh() {
+			var textContent = document.getElementById('textarea').value;
+			document.getElementById('viewer').srcdoc
+				= textContent;
+		}  
+	</script>
+
+
+	<style>
+		
+		#home:hover {
+			font-size: 20px;
+			background-color: #317587;
+			border-radius: 5px;
+		}
+
+		body {
+			background-color: #011725;
+		}
+
+		#main {
+
+			width: 100%;
+			height: 100%;
+			display: inline-flex;
+			flex-direction: row;
+		}
+
+		#textarea {
+			margin: 1px;
+			width: 50rem;
+			height: 45rem;
+			font-size: 18px;
+			font-family: courier;
+			border: solid green;
+			color: white;
+			background-color: #011725;
+			border-width: 5px;
+		}
+
+		#viewer {
+			border: none;
+			height: auto;
+			width: 90%;
+			border: solid black;
+			background-color: #ffffff;
+			border-width: 5px;
+
+
+		}
+
+		.flex {
+			display: flex;
+		}
+
+		.button {
+			background-color: black;
+			padding: 8px;
+			color: white;
+			border: none;
+			font-family: courier;
+			font-weight: bolder;
+			font-size: 16px; /* used to change the font size of buttons */
+			margin: 2px;
+			border-radius: 5px;
+		}
+
+		.button:active {
+			background-color: yellow;
+			color: white;
+		}
+
+		.button:hover {
+			background-color: red;
+			color: white;
+		}
+
+		.runbtn {
+			background-color: green;
+		}
+
+		.conatiner {
+			display: inline-flex;
+		}
+
+		#nav {
+			margin: 0vh;
+			padding: 3px;
+			background-color: #011725;
+		}
+
+		#footer,
+        ul {
+            color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+        }
+
+        #footer li {
+            gap: 10px;
+        }
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div id="nav">
+			<a href="/"><button class="button">Home</button></a>
+
+			<button value="Dock" class="button"
+				onclick="document. getElementById('main').style.flexDirection ='row'">Dock to Row</button>
+
+			<button value="Dock" class="button"
+				onclick="document.getElementById('main').style.flexDirection ='column'">Dock to column</button>
+
+			<button class="button runbtn" onclick="refresh()">RUN</button>
+
+			<button onclick="myFunction()" class="button">Copy text</button>
+
+			<input type="number" placeholder="Type font size value here.." id="setfontsize"></input>
+			<button class="button" onclick="setfontsize()">Set Font Size</button>
+
+		</div>
+		<br>
+		<div class="flex" name="flex">
+			<div class="main" id="main" name="main">
+				<textarea id="textarea" onkeyup="refresh()" placeholder="Type your code here..."> <!-- Html Code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Calculator</title>
+   <link rel="stylesheet" href="style.css">
+
+   <style>
+    
+/*  Css Code  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#calc {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content {
+    background: #2c302c;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+#content form input {
+    border: 0;
+    outline: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+#backspace {
+    background-color: rgb(237, 89, 30);
+    color: white;
+}
+#res {
+    padding: 10px;
+}
+#clear {
+    background-color: rgb(237, 89, 30);
+    color: white;
+}
+form #output {
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px 0;
+}
+form #output input {
+    text-align: right;
+    flex: 1;
+    font-size: 25px;
+}
+   </style>
+
+</head>
+<body>
+   <div id="calc">
+      <div id="content">
+         <form>
+            <div id="output">
+               <input type="text" id='res'>
+            </div>
+            <div class="btn">
+               <input type="button" value='C' onclick="Clear()" id="clear">
+               <input type="button" value='←' onclick="Back()" id="backspace">
+               <input type="button" value='%' onclick="Solve('%')">
+               <input type="button" value='/' onclick="Solve('/')">
+               <br>
+               <input type="button" value='7' onclick="Solve('7')">
+               <input type="button" value='8' onclick="Solve('8')">
+               <input type="button" value='9' onclick="Solve('9')">
+               <input type="button" value='x' onclick="Solve('*')">
+               <br>
+               <input type="button" value='4' onclick="Solve('4')">
+               <input type="button" value='5' onclick="Solve('5')">
+               <input type="button" value='6' onclick="Solve('6')">
+               <input type="button" value='-' onclick="Solve('-')">
+               <br>
+               <input type="button" value='1' onclick="Solve('1')">
+               <input type="button" value='2' onclick="Solve('2')">
+               <input type="button" value='3' onclick="Solve('3')">
+               <input type="button" value='+' onclick="Solve('+')">
+               <br>
+               <input type="button" value='00' onclick="Solve('00')">
+               <input type="button" value='0' onclick="Solve('0')">
+               <input type="button" value='.' onclick="Solve('.')">
+               <input type="button" value='=' onclick="Result()">
+            </div>
+         </form>
+      </div>
+   </div>
+
+   <script>
+     
+    //  Javascript code 
+
+function Solve(val) {
+   var v = document.getElementById('res');
+   v.value += val;
+}
+function Result() {
+   var num1 = document.getElementById('res').value;
+   try {
+      var num2 = eval(num1.replace('x', '*'));
+      document.getElementById('res').value = num2;
+   } catch {
+      document.getElementById('res').value = 'Error';
+   }
+}
+function Clear() {
+   var inp = document.getElementById('res');
+   inp.value = '';
+}
+function Back() {
+   var ev = document.getElementById('res');
+   ev.value = ev.value.slice(0, -1);
+}
+document.addEventListener('keydown', function (event) {
+   const key = event.key;
+   const validKeys = '0123456789+-*/.%';
+   if (validKeys.includes(key)) {
+      Solve(key === '*' ? 'x' : key);
+   } else if (key === 'Enter') {
+      Result();
+   } else if (key === 'Backspace') {
+      Back();
+   } else if (key.toLowerCase() === 'c') {
+      Clear();
+   }
+});
+   </script>
+</body>
+</html>
+                </textarea>
+				<iframe id="viewer"></iframe>
+				<script>
+					function myFunction() {
+						var copyText = document.getElementById("textarea");
+						copyText.select();
+						copyText.setSelectionRange(0, 99999)
+						document.execCommand("copy");
+						alert("Copied the text: " + copyText.value);
+					}
+					function setfontsize() {
+						var efontsize = document.getElementById("setfontsize").value
+						document.getElementById("textarea").style.fontSize = efontsize + "px";
+                    }
+				</script>
+			</div>
+			</div>
+			<!-- footer of website -->
+			<hr>
+			<br>
+			<div id="footer">
+				<h5>©2024, CodePanda</h5>
+				<ul type="none">
+					<li>
+						<h5>Home</h5>
+					</li>
+					<li>
+						<h5>Github</h5>
+					</li>
+					<li>
+						<h5>Projects</h5>
+					</li>
+				</ul>
+			</div>
+</body>
+</html>
+
+{% endblock body%}

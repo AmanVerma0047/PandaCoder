@@ -13,4 +13,6 @@ urlpatterns = [
     path("signup",views.signup,name="signup"),
     path("javascript",views.javascript,name="javascript"),
     path('codeEditor',views.codeEditor,name="codeEditor"),
+    path('calculator',views.calculator,name="calculator"),
+    path('clock',views.clock,name="clock"),
 ]
