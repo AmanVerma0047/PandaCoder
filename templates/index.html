@@ -1,26 +1,150 @@
-{% extends "base.html" %}
-{% block title %}CodePanda{% endblock title %}
-{% load static %}
-{% block body %}
+<html lang="en">
 
-<h2>Hello {{request.user}}!</h2>
-<a href="/logout">logout</a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> CodePanda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-<div class ="container-fluid" style="background-color:#247074; display:flex; flex-direction:row; align-items:center; justify-content:center;">
-  <div class = "showcasetext">
-    <h1 class="display-4 text-white">A Better Way to Practice Programming!</h1>
-    <p class="lead text-white">Learn to code with our 100+ practice code problems and a understandable documentation.</p>
-    <hr class="my-4 text-white">
-    <p class = "text-white">Use CodePanda Editor with real time programming execution.</p>
-    <p class="lead text-white"> 
-    <a class="btn text-white btn-primary btn-lg " href="/javascript" role="button">Java Script docs</a>
-    </p>
+
+
+</head>
+
+<body>
+  <!--Nav Bar-->
+  <nav class="navbar navbar-expand-lg bg-black bg-body-tertiary " data-bs-theme="dark">
+    <div class="container-fluid">
+      <img src="/static/logo.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+      <a class="navbar-brand" href="/"> &nbsp;CodePanda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Features
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/javascript">Javascript Docs</a></li>
+              <li><a class="dropdown-item" href="/codeEditor">Code Editor</a></li>
+              <li><a class="dropdown-item" href="#">Challanges</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/contactus">Contact Us</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <nav class="navbar bg-body-tertiary">
+          <form class="container-fluid justify-content-start">
+            <button class="btn btn-outline-success me-2" type="button"><a href="/signup">Sign Up</a></button>
+            <button class="btn btn-outline-success me-2" type="button"><a href="/login">Log in</a></button>
+          </form>
+        </nav>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+
+  <h2>Hello AnonymousUser!</h2>
+  <a href="/logout">logout</a>
+
+  <div class="container-fluid"
+    style="background-color:#247074; display:flex; flex-direction:row; align-items:center; justify-content:center;">
+    <div class="showcasetext">
+      <h1 class="display-4 text-white">A Better Way to Practice Programming!</h1>
+      <p class="lead text-white">Learn to code with our 100+ practice code problems and a understandable documentation.
+      </p>
+      <hr class="my-4 text-white">
+      <p class="text-white">Use CodePanda Editor with real time programming execution.</p>
+      <p class="lead text-white">
+        <a class="btn text-white btn-primary btn-lg " href="/javascript" role="button">Java Script docs</a>
+      </p>
+    </div>
+    <div class="showcaseimg">
+      <img src="/static/Real%20Time%20Code%20Editor.gif" alt="codeeditor" width="540px" height="540px">
+    </div>
   </div>
-  <div class = "showcaseimg">
-  <img src = "{% static 'Real Time Code Editor.gif' %}" alt="codeeditor" width="540px" height="540px">
+  <img src="/static/borderimage.png" width="100%">
   </div>
-</div>
-<img src = "{% static 'borderimage.png' %}" width="100%">
-</div>
 
-{% endblock body %}
+
+    <div class="container my-5">
+      <div class="p-5 text-center bg-body-tertiary rounded-3">
+        <h1>Realtime Code Editor</h1>
+        <img src="static/coding challenges.png" style="height: 480px; width: 480px;"
+          class="img-thumbnail rounded float-left">
+        <p class="col-lg-8 mx-auto lead">
+          CodePanda provides Realtime code editor to use and write code.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="b-example-divider"></div>
+
+
+
+    <div class="container my-5">
+      <div class="p-5 text-center bg-body-tertiary rounded-3">
+        <h1>Easiest Way to Learn</h1>
+        <img src="static\collaborative coding.png" style="height: 480px; width: 480px;"
+          class="img-thumbnail rounded float-left">
+        <p class="col-lg-8 mx-auto lead">
+          CodePanda provides inside documentation of language so you can easily read and learn the concepts in
+          minutes.
+        </p>
+      </div>
+    </div>
+    <div class="b-example-divider"></div>
+
+    <div class="container my-5">
+      <div class="p-5 text-center bg-body-tertiary rounded-3">
+        <h1>Get Projects Code</h1>
+        <img src="static\Easiest way to learn.png" style="height: 480px; width: 480px;"
+          class="img-thumbnail rounded float-left">
+        <p class="col-lg-8 mx-auto lead">
+          CodePanda provides 4+ projects to reference and learn how to make them.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="/projects" class="nav-link px-2 text-muted">projects</a></li>
+        <li class="nav-item"><a href="/code editor" class="nav-link px-2 text-muted">code editor</a></li>
+        <li class="nav-item"><a href="/javascript" class="nav-link px-2 text-muted">docs</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; 2022 CodePanda</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <div class="b-example-divider"></div>
+
+
+</body>
+
+</html>
