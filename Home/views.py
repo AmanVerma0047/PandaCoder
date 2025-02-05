@@ -92,3 +92,6 @@ def photo(request):
 
 def clock(request):
     return render(request,"clock.html")
+
+def blogpost(request):
+    return render(request,"blogpost.html")

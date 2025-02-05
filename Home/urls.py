@@ -16,4 +16,5 @@ urlpatterns = [
     path('calculator',views.calculator,name="calculator"),
     path('clock',views.clock,name="clock"),
     path('photo',views.photo,name="photo"),
+    path('blogpost',views.blogpost,name="blogpost"),
 ]
