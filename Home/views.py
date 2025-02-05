@@ -87,5 +87,8 @@ def profile(request):
 def calculator(request):
     return render(request, "calculator.html")
 
+def photo(request):
+    return render(request,"photo.html")
+
 def clock(request):
     return render(request,"clock.html")

@@ -15,4 +15,5 @@ urlpatterns = [
     path('codeEditor',views.codeEditor,name="codeEditor"),
     path('calculator',views.calculator,name="calculator"),
     path('clock',views.clock,name="clock"),
+    path('photo',views.photo,name="photo"),
 ]

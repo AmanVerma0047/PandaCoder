@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+
+*
+{
+  margin: 0;
+  padding: 0;
+	background-color: #262626;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad          Pro", "DejaVu Sans Condensed", Helvetica, Arial,        "sans-serif";
+}
+
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 10vh;
+	background-color: #000000;
+	position: fixed;
+	width: 100%;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	z-index: 1;
+	opacity: 0.9;
+}
+
+.logo{
+	color: #49ffd0;
+	letter-spacing: 25px;
+	font-size: 20px;
+	background-color: #000000;
+}
+
+.navLink{
+	display: flex;
+	justify-content: space-around;
+	width: 40%;
+	background-color: #000000;
+	}
+	
+.navLink li{
+	list-style: none;
+	background-color: #000000;
+}
+
+.navLink a{
+	color: aquamarine;
+	text-decoration: none;
+	letter-spacing: 2px;
+	font-size: 16px;
+	background-color: #000000;
+}
+
+.navLink a:hover{
+   color: #588275;
+}
+
+.lines{
+	display: none;
+	cursor:  crosshair;
+    }
+
+.lines div{
+	width: 25px;
+	height: 3px;
+	background-color: aquamarine;
+	margin: 5px;
+	
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	align-items: center;
+  color: #fff;
+  padding-top: 17vh;
+}
+
+
+
+
+.container
+{
+  padding-top: 13vh;
+  width: 1400px;
+  margin: auto;
+  columns: 6;
+  column-gap: 20px;
+  
+}
+.container .box
+{
+  width: 100%;
+  margin-bottom: 10px;
+  break-inside: avoid;
+  border-radius: 15px;
+}
+.container .box img
+{
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 10px;
+}
+
+
+img:hover {
+  
+  opacity: .95;
+  box-shadow: 0 0 10px #fff;
+}
+
+.caption{
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 2px;
+}
+
+@media (max-width: 1427px)
+{
+  .container
+  {
+    columns: 5;
+    width: calc(100% - 40px);
+  }
+}
+@media (max-width: 1200px)
+{
+  .container
+  {
+    columns: 4;
+  }
+}
+
+@media (max-width: 1000px)
+{
+  .container
+  {
+    columns: 3;
+  }
+  
+  
+  body{
+		overflow-x: hidden;
+	}
+	
+	.navLink{
+	    position: absolute;
+	    right: 0px;
+	    height: 20vh;
+	    top: 10vh;
+	    background-color: #000; 
+	    display: flex;
+	    flex-direction: column;
+		align-items: center;
+		width: 100%;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in;
+		opacity: 0.9;
+	}
+	
+	.navLink li{
+		opacity: 1;
+	}
+	
+	.lines{
+		display: block;
+	}
+	
+	.nav-active{
+		transform: translateX(0%);
+	}
+	
+	@keyframes navLinkFade{
+		from{
+			opacity: 0;
+			transform: translateX(50px);
+			}
+		
+		to{
+			opacity: 1;
+			transform: translateX(0px);
+			}
+		}
+	
+	
+	.toggle .l1{
+		transform: rotate(-45deg) translate(-5px,6px);
+	}
+	
+	.toggle .l2{
+		opacity: 0;
+	}
+	
+	.toggle .l3{
+		transform: rotate(45deg) translate(-5px,-6px);
+	}
+}
+  
+  
+}
+
+@media (max-width: 786px)
+{
+  .container
+  {
+    columns: 2;
+  }
+  
+  h1{
+    font-size: 1.3em;
+  }
+  
+  h2{
+    font-size: 1em;
+  }
+}
+
+
+@media (max-width: 480px)
+{
+  .container
+  {
+    columns: 1;
+  }
+}
+
+</style>
+<script>
+
+const navSlide = () => {
+		const lines = document.querySelector('.lines');
+		const nav = document.querySelector('.navLink');
+		
+		lines.addEventListener('click',() => {
+			nav.classList.toggle('nav-active');
+			
+		//Line Animation
+		lines.classList.toggle('toggle');
+		});
+	   
+	}
+	
+	navSlide();
+
+</script>
+
+</head>
+<body>
+  <nav>
+   <div class="logo">
+     <h5>LOGO</h5>
+   
+   </div>
+   <ul class="navLink">
+     <li><a href="#">About</a></li>
+     <li><a href="#">Contact</a></li>
+     <li><a href="#">Projects</a></li>
+   </ul>
+ <div class="lines">
+   <div class="l1"></div>
+   <div class="l2"></div>
+   <div class="l3"></div>
+ </div>
+ </nav>
+
+<header>
+<h1>Pinterest Style Image Galley</h1>
+<h2>with Responsive Navigation Bar</h2>
+</header> 
+
+
+<div class="container">
+ 
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/001.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/001.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/002.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/002.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/003.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/003.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/029.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/029.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/005.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/005.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/006.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/006.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/007.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/007.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/008.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/008.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://orionstardesign.com/wp-content/uploads/2023/08/010.jpg" >
+             <img src="https://orionstardesign.com/wp-content/uploads/2023/08/010.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/009.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/009.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/010.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/010.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/011.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/011.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/012.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/012.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/013.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/013.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/014.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/014.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/015.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/015.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+    
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/016.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/016.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/019.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/019.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/020.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/020.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/021.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/021.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/022.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/022.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/023.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/023.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/024.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/024.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/025.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/025.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/026.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/026.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div> 
+   
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/027.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/027.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div>
+
+
+
+
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/030.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/030.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div>
+
+
+
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/031.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/031.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div>
+
+
+
+<div class="box">
+             <a href="https://gallery1.charleskdesigns.com/image/032.jpg" >
+             <img src="https://gallery1.charleskdesigns.com/image/032.jpg" alt="image"></a>
+         <div class="caption">Lorem ipsum </div>
+</div>
+
+</body>
+       
+
+</html>
